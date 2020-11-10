@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import Slider from "react-slick";
+//import Slider from "react-slick";
 import TextField, {Input} from '@material/react-text-field';
 import MaterialIcon from '@material/react-material-icon';
 
 import logo from '../../assets/logo.svg';
 import restaurante from '../../assets/restaurante-fake.png';
-import { Wrapper,Container, Search, Logo, Map, CarouselTitle } from './styles';
+import { Card } from '../../components';
+import { Wrapper,Container, Carousel,Search, Logo, Map, CarouselTitle } from './styles';
 
 const Home = () =>{
     const [inputValue, setInputValue] = useState('');
@@ -34,15 +35,13 @@ const Home = () =>{
                     />
                     </TextField>  
                     <CarouselTitle>Na sua Área</CarouselTitle>
-                    <Slider {...settings}>
-                        <div><img src={restaurante} alt="r"/></div>
-                        <div><img src={restaurante} alt="r"/></div>
-                        <div><img src={restaurante} alt="r"/></div>
-                        <div><img src={restaurante} alt="r"/></div>
-                        <div><img src={restaurante} alt="r"/></div>
-                        <div><img src={restaurante} alt="r"/></div>
-                        <div><img src={restaurante} alt="r"/></div>                                                                                                                                                
-                    </Slider>
+                    <Carousel {...settings}>
+                        <Card photo={restaurante} title="Nome 1" />
+                        <Card photo={restaurante}  title="Nome 2" />
+                        <Card photo={restaurante} title="Nome 3"  />
+                        <Card photo={restaurante}  title="Nome 4" />
+                        <Card photo={restaurante}  title="Nome 5" />                                                                        
+                    </Carousel>
                 </Search>
             </Container>
             <Map />

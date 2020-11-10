@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Slider from "react-slick";
 
 export const Wrapper = styled.div`
     display:flex;
@@ -29,6 +30,12 @@ export const Map = styled.div`
     width:100%;
 `;
 
+export const Carousel = styled(Slider)`
+    .slick-slide{
+        margin-right:16px;
+    }
+`;
+
 export const CarouselTitle = styled.h1`
     color:${(props) =>props.theme.colors.text};
     font-family: ${(props) =>props.theme.fonts.regular};
@@ -37,3 +44,4 @@ export const CarouselTitle = styled.h1`
     line-height:29px;
     margin:16px 0;
 `;
+
