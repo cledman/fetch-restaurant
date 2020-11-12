@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-//import Slider from "react-slick";
+import { useSelector } from 'react-redux';
 import TextField, {Input} from '@material/react-text-field';
 import MaterialIcon from '@material/react-material-icon';
 
 import logo from '../../assets/logo.svg';
-import restaurante from '../../assets/restaurante-fake.png';
+import restaurantFake from '../../assets/restaurante-fake.png';
 import { Card, RestaurantCard, Modal, Map } from '../../components';
 import { Wrapper,Container, Carousel,Search, Logo,  CarouselTitle } from './styles';
 
@@ -12,6 +12,7 @@ const Home = () =>{
     const [inputValue, setInputValue] = useState('');
     const [query, setQuery] = useState(null);
     const [modalOpened, setModalOpened] = useState(true);
+    const {restaurants} = useSelector((state) =>state.restaurants);    
 
     const settings = {
         dots: false,
@@ -46,14 +47,20 @@ const Home = () =>{
                     </TextField>  
                     <CarouselTitle>Na sua Área</CarouselTitle>
                     <Carousel {...settings}>
-                        <Card photo={restaurante} title="Nome 1" />
-                        <Card photo={restaurante}  title="Nome 2" />
-                        <Card photo={restaurante} title="Nome 3"  />
-                        <Card photo={restaurante}  title="Nome 4" />
-                        <Card photo={restaurante}  title="Nome 5" />                                                                        
+                        {
+                            restaurants.map((restaurant) =>
+                                <Card 
+                                    key={restaurant.place_id}
+                                    photo={restaurant.photos? restaurant.photos[0].getUrl(): restaurantFake}
+                                    title={restaurant.name}
+                                 />)
+                            }
                     </Carousel>
                 </Search>
-                <RestaurantCard />
+                {restaurants.map((restaurants) => (
+                     <RestaurantCard restaurant={restaurants} />
+                ))}
+               
             </Container>
             <Map 
                 query={query}
