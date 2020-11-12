@@ -5,14 +5,15 @@ export const MapContainer = (props) =>{
     const { google } = props;    
 
     function searchNearby(){
-        
+
     }
 
     return <Map google={google} centerAroundCurrentLocation />
 }
 
 export default GoogleApiWrapper({
-    apiKey: process.env.REACT_APP_GOOGLE_API_KEY,
-    language:'pt-BR',
+  apiKey: process.env.REACT_APP_GOOGLE_API_KEY,
+  language: 'pt-BR',
 })(MapContainer);
+
 
