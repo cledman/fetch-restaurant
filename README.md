@@ -1,68 +1,75 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Resturants Finder
 
-## Available Scripts
+Resturants Finder is the project from a course from [Digital Innovation One](https://digitalinnovation.one/) and it´s made with [React](https://reactjs.org). 
 
-In the project directory, you can run:
 
-### `yarn start`
+<p align="center">
+    <img src=".github/preview.gif"/>
+</p>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+# Guide
 
-### `yarn test`
+* [Features](#features)
+* [Installation](#installation)
+* [Using](#using)
+* [Technologies](#technologies)
+* [Future Implementations](#future-implementations)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+# Features
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+*  Users can search for resturants.
+*  User can search by just writing the name of the food, place, etc.
+*  We have Carousel to display previews.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Installation
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**You will need install:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+ [Node.js](https://nodejs.org/en/download/) <br />
+ [Yarn](https://classic.yarnpkg.com/en/) 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**Cloning repository**
 
-## Learn More
+```git clone https://github.com/cledman/fetch-restaurant```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Install dependencies **
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```yarn install```
 
-### Code Splitting
+**Configuration from ENVIRONMENT VARIABLES**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+check the .env.example to post your Environment Variable an put that on an .env file.
 
-### Analyzing the Bundle Size
+# Using
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+```yarn start```
 
-### Making a Progressive Web App
+# Technologies
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+* [NodeJS](https://nodejs.org/en/) to handle the server, 
+* [React](https://reactjs.org) to handle the rendering, 
+* [Redux](https://redux.js.org/) to handle State container,
+* [Styled Components](https://www.styled-components.com/) to handle components and styles, 
+* [Material](https://material-ui.com/pt/) to handle the styles too, 
+* [React Slick](https://react-slick.neostack.com/) to handle carousel, 
+* [React Rating Stars](https://www.npmjs.com/package/react-rating-stars-component) for rating restaurants
+* [React lottie](https://www.npmjs.com/package/react-lottie) to handle animations, 
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-### Deployment
+# Future Implementations
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+*  Create categories pages.
+*  Modal windows for messagens and alerts
+*  Themes changes
+*  Better UI
 
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Thanks to:
+* [Patrick Narciso](https://www.linkedin.com/in/patricknarciso/) and  [Digital Innovation One](https://digitalinnovation.one/)
+##
