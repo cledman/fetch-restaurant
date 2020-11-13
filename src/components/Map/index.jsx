@@ -12,15 +12,21 @@ export const MapContainer = (props) =>{
     
     useEffect( () =>{
       if(query){
+        
         searchByQuery(query);
       }
-    },[query])
+      
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [query])
   
     useEffect( () =>{
         if(placeId){
           getRestaurantById(placeId);
         }
-    },[placeId])
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [placeId])
   
 
     function getRestaurantById (placeId) {
